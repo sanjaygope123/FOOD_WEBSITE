@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+<link rel="text/html" href="index.html">
+<title>Title</title>
+<script>
+    function logIn() {
+        var email_id = document.getElementById('email_id').value;
+        var pass = document.getElementById('pass').value;
+        if (email_id !== "" && pass !== "") {
+            var arr = new Array(email_id, pass);
+            var jData = JSON.stringify(arr);
+            localStorage.setItem('uinfo', jData);
+            window.location = 'index.html';
+        } else {
+            alert('Please insert email and password');
+        }
+    }
+</script>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+            font-family:'Times New Roman', Times, serif;
+            background-color: #f8f8f8;
+            margin: 170px 0px 50px 400px;
+            padding: 0;
+            background: url(images/home/home_bgi-3.jpg);
+            background-size: cover;
+        }
+
+.login {
+    padding: 20px ; /* Adjust the value as needed */
+   /* background: url(https://img.freepik.com/premium-photo/home-delivery-food-purchase-via-internet-your-smartphone-other-gadget_489646-21488.jpg?w=900) no-repeat;*/
+    background-size: cover; /* Make the background image responsive */
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.box {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+}
+.login div div div.login{
+    height: 100%;
+    background: #e6ed9f;
+    /*border: .2rem solid red;
+    border-radius: 1rem;*/
+    width: 40rem;
+}
+.login h1{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif ;
+}
+.login p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.box.login.btn1{
+    height: 45px;
+    width: 0%;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+    color: red;
+    font-weight: 70;
+    border-radius: 60px;
+}
+.btn2{
+    height: 45px;
+    width: 60%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+    color: red;
+    font-weight: 700;
+    border-radius: 60px;
+}
+
+</style>
+</head>
+<body>
+
+    <section class="login" id="login">
+        <div class="container">
+            <div class="box">
+                <div class="login">
+                <br><h1>Account Login</h1><br><br>
+                <p>Email Id: <input type="email" name="email_id" id="email_id" placeholder="  Enter Your Email"><br><br></p>
+                <p>Password: <input type="Password" name="pass" id="pass" placeholder="  Enter Your Password"><br><br></p>
+                <button class="btn1" onclick="logIn()">Login</button>
+                </div>
+            </div>
+        </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
